@@ -1,0 +1,33 @@
+<html>
+
+<header>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</header>
+
+<style>
+
+#big {
+  border: 5px solid red;
+  height: 200px;
+  width: 200px;
+}
+
+body {
+  margin: 0;
+}
+
+</style>
+
+<body>
+<div id="big">
+</div>
+
+<script type="text/javascript">
+  $("#big").on("mouseleave", function () {
+    console.log("mouseleave");
+  });
+
+</script>
+
+</body>
+</html>

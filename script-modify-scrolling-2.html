@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<style>
+iframe {
+  width: 100%;
+  height: 300px;
+}
+</style>
+
+<div>
+  <input id="scrolling_button" type="button" value="scrolling_test[yes]" />
+</div>
+<iframe id="iframe_container" src="http://chaopeng.me/blog/"></iframe>
+
+<script>
+var scrollingAttr = "yes";
+var buttonElement = document.getElementById("scrolling_button");
+var iframeElement = document.getElementById("iframe_container");
+
+buttonElement.onclick = function() {
+  scrollingAttr = scrollingAttr == "no" ? "yes" : "no";
+  iframeElement.scrolling = scrollingAttr;
+  buttonElement.value = "scrolling_test[" + scrollingAttr + "]";
+  console.log(scrollingAttr);
+};
+</script>

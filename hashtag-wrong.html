@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Project:	hash test
+==== Author:	Jeevan Khaira
+==== Copyright:	(c) 2016 Jeevan Khaira - All Rights Reserved
+~-->
+<html>
+<head>
+<title>hash test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+
+html,body
+	{width:100%;
+	 height:100%;
+	 margin:0;
+	 padding:0;}
+h1
+	{font: 2em "Open Sans", sans-serif;
+	 margin-top:.3em;;}
+#container
+	{width:200px;
+	 margin:50px;
+	 overflow-y:scroll;}
+#container,.section
+	{height:300px;}
+#red
+	{background-color:red;}
+#green
+	{background-color:green;}
+#blue
+	{background-color:blue;}
+
+</style>
+</head>
+<body>
+	<div>&nbsp;</div>
+	<h1>Hash test</h1>
+	<p>
+		Navigate to either of the green or blue sections of the small box below using the internal 'hash/anchor' links, then:
+		<ol>
+			<li>Copy and paste into a new tab (all is fine)</li>
+			<li>Reload by clicking the reload button (doesn't work)</li>
+			<li>Reload by clicking the address bar and hitting the return key (doesn't work)</li>
+		</ol>
+	</p>
+	<nav>
+		<ul>
+			<li><a href="#red">red</a></li>
+			<li><a href="#green">green</a></li>
+			<li><a href="#blue">blue</a></li>
+		</ul>
+	</nav>
+
+	<div id="container">
+		<div class="section" id="red">
+		</div><div class="section" id="green">
+		</div><div class="section" id="blue">
+		</div>
+	</div>
+</body>
+</html>

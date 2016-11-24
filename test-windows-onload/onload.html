@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<iframe src="http://localhost:8888/iframe.html"></iframe>
+
+<script>
+window.onload = () => {
+  var TS = window.performance.timing.navigationStart + window.performance.now();
+  console.log("mainframe onload=" + TS);
+};
+</script>

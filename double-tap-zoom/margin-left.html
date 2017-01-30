@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<style>
+#content {
+  margin-left: 100px;
+  border: 1px solid red;
+}
+</style>
+
+<script>
+function change_width() {
+  let width = document.getElementById("width").value;
+  document.getElementById("content").style.width = width;
+}
+
+function change_margin_left() {
+  let marginLeft = document.getElementById("margin").value;
+  document.getElementById("content").style.marginLeft = marginLeft;
+}
+
+</script>
+
+<input type="text" id="width" value="60%"/>
+
+<button type="button" onclick="change_width()">
+  set div width
+</button>
+
+<br>
+
+<input type="text" id="margin" value="100px"/>
+
+<button type="button" onclick="change_margin_left()">
+  set div margin left
+</button>
+
+<br>
+
+<div id="content">
+This is a div.<br>
+This is a div.<br>
+This is a div.<br>
+This is a div.<br>
+This is a div.<br>
+This is a div.<br>
+</div>

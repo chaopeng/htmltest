@@ -5,8 +5,17 @@
   width: 80%;
   border: 1px solid red;
 }
+#big-padding-left {
+  padding-left: 80px;
+}
+#small-padding-left {
+  padding-left: 10px;
+}
 #big-margin-left {
   margin-left: 80px;
+}
+#small-margin-left {
+  margin-left: 10px;
 }
 </style>
 
@@ -18,13 +27,28 @@
     <li>This is 2 level ul.
       <ul>
         <li>This is li.</li>
-        <li>This is 3 level ul.
-          <ul id="big-margin-left">
+        <li>This is 3 level big-padding-left ul.
+          <ul id="big-padding-left">
             <li>This is li.</li>
             <li>This is li.</li>
             <li>This is li.</li>
           </ul>
         </li>
+        <li>This is li.</li>
+      </ul>
+    </li>
+    <li>This is 2 level small-padding-left ul.
+      <ul id="small-padding-left">
+        <li>This is li.</li>
+      </ul>
+    </li>
+    <li>This is 2 level big-margin-left ul.
+      <ul id="big-margin-left">
+        <li>This is li.</li>
+      </ul>
+    </li>
+    <li>This is 2 level small-margin-left ul.
+      <ul id="small-margin-left">
         <li>This is li.</li>
       </ul>
     </li>

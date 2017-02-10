@@ -3,6 +3,8 @@
 <style>
 body {
   width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #content {
@@ -18,20 +20,76 @@ body {
 </style>
 
 <script>
-function change_p_margin() {
+function body_margin() {
+  let margin = document.getElementById("body-margin").checked;
+  if (margin) {
+    document.body.style.marginLeft = "auto";
+    document.body.style.marginRight = "auto";
+  } else {
+    document.body.style.marginLeft = 0;
+    document.body.style.marginRight = 0;
+  }
+}
+
+function set_p_margin1() {
   let margin = document.getElementById("margin").value;
   document.getElementById("p").style.margin = margin;
 }
 
-function change_p_padding() {
+function set_p_margin2() {
+  let marginLeft = document.getElementById("margin-left").value;
+  document.getElementById("p").style.marginLeft = marginLeft;
+
+  let marginRight = document.getElementById("margin-right").value;
+  document.getElementById("p").style.marginRight = marginRight;
+
+  let marginTop = document.getElementById("margin-top").value;
+  document.getElementById("p").style.marginTop = marginTop;
+
+  let marginBottom = document.getElementById("margin-bottom").value;
+  document.getElementById("p").style.marginBottom = marginBottom;
+}
+
+function set_p_padding1() {
   let padding = document.getElementById("padding").value;
   document.getElementById("p").style.padding = padding;
 }
+
+function set_p_padding2() {
+  let paddingLeft = document.getElementById("padding-left").value;
+  document.getElementById("p").style.paddingLeft = paddingLeft;
+
+  let paddingRight = document.getElementById("padding-right").value;
+  document.getElementById("p").style.paddingRight = paddingRight;
+
+  let paddingTop = document.getElementById("padding-top").value;
+  document.getElementById("p").style.paddingTop = paddingTop;
+
+  let paddingBottom = document.getElementById("padding-bottom").value;
+  document.getElementById("p").style.paddingBottom = paddingBottom;
+}
 </script>
+
+<input type="checkbox" id="body-margin" onchange="body_margin()" checked>
+  Body margin: auto
+</input>
+
+<br>
 
 <input type="text" id="margin" value="0px"/>
 
-<button type="button" onclick="change_p_margin()">
+<button type="button" onclick="set_p_margin1()">
+  set p margin all
+</button>
+
+<br>
+
+L:<input type="text" id="margin-left" value="0px"> 
+R:<input type="text" id="margin-right" value="0px"> 
+T:<input type="text" id="margin-top" value="0px"> 
+B:<input type="text" id="margin-bottom" value="0px">
+
+<button type="button" onclick="set_p_margin2()">
   set p margin
 </button>
 
@@ -39,10 +97,23 @@ function change_p_padding() {
 
 <input type="text" id="padding" value="0px"/>
 
-<button type="button" onclick="change_p_padding()">
+<button type="button" onclick="set_p_padding1()">
+  set p padding all
+</button>
+
+<br>
+
+L:<input type="text" id="padding-left" value="0px"> 
+R:<input type="text" id="padding-right" value="0px"> 
+T:<input type="text" id="padding-top" value="0px"> 
+B:<input type="text" id="padding-bottom" value="0px">
+
+<button type="button" onclick="set_p_padding2()">
   set p padding
 </button>
 
+<br>
+<br>
 <br>
 
 <div id="content">

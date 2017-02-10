@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<style>
+body {
+  width: 80%;
+}
+
+#content {
+  border: 1px solid red;
+  padding: 20px;
+}
+
+#p {
+  border: 1px solid green;
+  margin: 0px;
+  padding: 0px;
+}
+</style>
+
+<script>
+function change_p_margin() {
+  let margin = document.getElementById("margin").value;
+  document.getElementById("p").style.margin = margin;
+}
+
+function change_p_padding() {
+  let padding = document.getElementById("padding").value;
+  document.getElementById("p").style.padding = padding;
+}
+</script>
+
+<input type="text" id="margin" value="0px"/>
+
+<button type="button" onclick="change_p_margin()">
+  set p margin
+</button>
+
+<br>
+
+<input type="text" id="padding" value="0px"/>
+
+<button type="button" onclick="change_p_padding()">
+  set p padding
+</button>
+
+<br>
+
+<div id="content">
+  <p id="p">
+    Chromium is a chemical element with symbol Cr and atomic number 24. It is 
+    the first element in Group 6. It is a steely-grey, lustrous, hard and 
+    brittle metal which takes a high polish, resists tarnishing, and has a high 
+    melting point. <br>
+    Chromium is a chemical element with symbol Cr and atomic number 24. It is 
+    the first element in Group 6. It is a steely-grey, lustrous, hard and 
+    brittle metal which takes a high polish, resists tarnishing, and has a high 
+    melting point. <br>
+    Chromium is a chemical element with symbol Cr and atomic number 24. It is 
+    the first element in Group 6. It is a steely-grey, lustrous, hard and 
+    brittle metal which takes a high polish, resists tarnishing, and has a high 
+    melting point. <br>
+  </p>
+</div>

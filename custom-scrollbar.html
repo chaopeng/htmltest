@@ -3,6 +3,7 @@
 <style type="text/css">
   body {
     margin: 0;
+    position: relative;
   }
   
    ::-webkit-scrollbar {
@@ -29,12 +30,31 @@
    ::-webkit-scrollbar-corner {
     background: transparent;
   }
-  
-  div {
+  div.d1 {
+    position: relative;
+    display: table;
+    width: 100%;
+  }
+  div.d2 {
+    position: absolute;
+    width: 100%;
+  }
+  div.d3 {
+    display: flex;
+    position: relative;
     width: 100%;
   }
 </style>
 
-<div style="position: absolute; top: 1200px; min-width: 996px">
+<div class="d1">
+  <div class="d2">
+    <div class="d3">
+    123123123
+    </div>
+  </div>
+</div>
+
+<div id="div" style="position: absolute; top: 1200px;">
   end
 </div>
+

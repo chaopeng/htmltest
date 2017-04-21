@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+<style>
+*{ margin:0; padding:0; font-size:12px;font-family:新宋体;}
+table{
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+
+	border-style: solid;
+	border-color: #EEE;
+	text-align: center;
+}
+td{
+	min-width: 24px; width: 24px;
+	min-height: 24px; height: 24px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 1px;
+	border-right-width: 1px;
+	border-style: solid;
+	border-color: #EEE;
+}
+.mainBox{
+	top:35px;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	overflow: auto;
+}
+
+</style>
+</head>
+
+<body>
+<div id=map class=mainBox></div>
+</body>
+</html>
+
+<script>
+var t = "<table border='0' cellpadding='0' cellspacing='0' id='tb1'>";
+
+for( var y = 0; y < 200; y++ ){
+	t += "<tr>";
+	for( var x = 0; x < 300; x++ ){
+		t += "<td></td>";
+	}
+	t += "</tr>";
+}
+t += "</table>";
+
+
+function $(id){ return document.getElementById(id); }
+
+$("map").innerHTML = t;
+
+
+function AddRowEvent(row,colCount){
+	for(var j=0; j<colCount; j++){
+		var col = row.cells[j];
+		col.onmouseout = function(){ this.style.backgroundColor="#FFF"; $("i_xy").value = ""; }
+		col.onmouseover = function () { this.style.backgroundColor="#DEF"; $("i_xy").value = this.innerHTML; }
+	}
+}
+
+function BeginEditTable(table){
+	var colCount = table.rows[0].cells.length;
+	var colEnd =colCount - 1;
+	for(var i=0; i<table.rows.length;i++){
+		var row = table.rows[i];
+		AddRowEvent(row,colCount);
+	}
+}
+
+
+BeginEditTable( $("tb1") );
+
+
+</script>
+

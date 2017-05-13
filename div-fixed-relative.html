@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<style>
+#outerdiv
+{
+   width:500px;
+   height:500px;
+   overflow:scroll;
+   position:relative;
+   background:#77CCAA;
+   will-change: transform;
+}
+
+#innerdiv
+{
+   width:450px;
+   height:600px;
+   overflow:scroll;
+   background:#CC77AA;
+}
+
+</style>
+
+<button id='btn'>show</button>
+
+<div id="outerdiv" style="will-change:transform;position:relative;">
+<div id="innerdiv" style="position:fixed;">
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+ <p> this is a dummy par</p>
+  <p> this is a dummy par</p>
+   <p> this is a dummy par</p>
+    <p> this is a dummy par</p>
+     <p> this is a dummy par</p>
+      <p> this is a dummy par</p>
+       <p> this is a dummy par</p>
+        <p> this is a dummy par</p>
+</div>
+</div>
+
+<script>
+let fixed = true;
+document.getElementById('btn').addEventListener('click', () => {
+  if (fixed) {
+    document.getElementById('innerdiv').style='position:relative;';
+  } else {
+    document.getElementById('innerdiv').style='position:fixed;';
+  }
+  fixed = !fixed;
+});
+
+
+    var innerDiv = document.getElementById("innerdiv");
+  console.log(innerDiv.scrollTop);
+innerDiv.addEventListener( "scroll", function(e) {
+if(innerDiv.scrollTop >= 150) {
+        console.log("more than 150");
+        innerDiv.style = "will-change:transform;position:relative;";
+    }
+  }, {passive: true});
+
+</script>

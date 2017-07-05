@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<style>
+  #p1 {
+    background-color: #FAEBD7;
+    width: 200px;
+    height: 1100px;
+  }
+</style>
+
+<div id="p1">
+  <button style="position: absolute; top: 1000px;" onclick="p2()">link</button>
+</div>
+
+<script>
+  let p1 = document.getElementById("p1");
+
+  function p2() {
+    document.body.removeChild(p1);
+    history.pushState(1, null, "2.html")
+  }
+
+  window.onpopstate = (event) => {
+    document.body.appendChild(p1);
+  };
+</script>

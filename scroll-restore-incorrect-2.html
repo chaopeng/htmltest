@@ -2,22 +2,30 @@
 
 <style>
   #p1 {
-    background-color: #FAEBD7;
+    background-color: green;
     width: 200px;
-    height: 1100px;
+    height: 1000px;
+  }
+
+  #p0 {
+    background-color: red;
+    width: 200px;
+    height: 1000px;
   }
 </style>
 
+<p>Simulate infinite page</p>
+<div id="p0"></div>
 <div id="p1">
-  <button style="position: absolute; top: 1000px;" onclick="p2()">link</button>
+  <button style="position: absolute; top: 1900px;" onclick="p2()">link</button>
 </div>
 
 <script>
   let p1 = document.getElementById("p1");
 
   function p2() {
-    document.body.removeChild(p1);
     history.pushState(1, null, "2.html")
+    document.body.removeChild(p1);
   }
 
   window.onpopstate = (event) => {

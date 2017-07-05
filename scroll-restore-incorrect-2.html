@@ -21,10 +21,12 @@
 </div>
 
 <script>
+  let p0 = document.getElementById("p0");
   let p1 = document.getElementById("p1");
 
   function p2() {
-    history.pushState(1, null, "2.html")
+    history.pushState(1, null, "2.html");
+    document.body.removeChild(p0);
     document.body.removeChild(p1);
   }
 

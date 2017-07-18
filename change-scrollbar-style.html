@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<style>
+  div{ height: 100px; width:200px; overflow:scroll; }
+</style>
+
+<div>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+    some text<br>
+</div>
+<button>style scrollbars</button>
+
+<script type="text/javascript">
+  document.getElementsByTagName("button")[0].addEventListener("click", function(){
+      var style = document.createElement("style");
+  	style.setAttribute("type","text/css");
+      style.innerHTML = "\
+          div{ background:#F00; }\
+          div::-webkit-scrollbar{ display:none; }\
+          div{ border: 1px solid blue; }";
+  	document.getElementsByTagName("head")[0].appendChild(style);
+  }, false);
+</script>

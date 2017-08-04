@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<style>
+  .custom-scrollbar ::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+  }
+  
+  .custom-scrollbar ::-webkit-scrollbar-thumb {
+    background-color: red;
+  }
+
+  #d1, #d3 {
+    height: 2000px;
+  }
+
+  #d2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    overflow: auto;
+  }
+</style>
+
+<div id='d1'>
+  
+  <button id='b1'>change body scrollbar</button>
+  <button id='b2'>change div scrollbar</button>
+  
+  <div id='d2'>
+    <div id="d3">
+    </div>
+  </div>
+  
+  
+</div>
+
+<script>
+  
+  const theme_change = (elm) => {
+    if (elm.className === 'custom-scrollbar') {
+      elm.className = '';
+    } else {
+      elm.className = 'custom-scrollbar';
+    }
+  };
+  
+  b1.onclick = () => {
+    theme_change(document.body);
+  };
+  
+  b2.onclick = () => {
+    theme_change(document.getElementById('d2'));
+  };
+
+</script>

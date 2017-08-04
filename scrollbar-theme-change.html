@@ -13,6 +13,10 @@
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background-color: red;
   }
+  
+  .custom-scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 
   #d1, #d3 {
     height: 2000px;
@@ -29,8 +33,13 @@
 
 <div id='d1'>
   
-  <button id='b1'>change body scrollbar</button>
-  <button id='b2'>change div scrollbar</button>
+  <button id='b1'>change body scrollbar: custom</button>
+  <button id='b2'>change div scrollbar: custom</button>
+  
+  <br>
+  
+  <button id='b3'>change body scrollbar: custom none</button>
+  <button id='b4'>change div scrollbar: custom none</button>
   
   <div id='d2'>
     <div id="d3">
@@ -42,20 +51,28 @@
 
 <script>
   
-  const theme_change = (elm) => {
-    if (elm.className === 'custom-scrollbar') {
+  const theme_change = (elm, theme) => {
+    if (elm.className === theme) {
       elm.className = '';
     } else {
-      elm.className = 'custom-scrollbar';
+      elm.className = theme;
     }
   };
   
   b1.onclick = () => {
-    theme_change(document.body);
+    theme_change(document.body, 'custom-scrollbar');
   };
   
   b2.onclick = () => {
-    theme_change(d2);
+    theme_change(d2, 'custom-scrollbar');
+  };
+  
+  b3.onclick = () => {
+    theme_change(document.body, 'custom-scrollbar-none');
+  };
+  
+  b4.onclick = () => {
+    theme_change(d2, 'custom-scrollbar-none');
   };
 
 </script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<style>
+#d1{ height: 100px; width:200px; overflow:scroll; }
+#d2{ height: 100px; width:2000px; }
+body { overflow:scroll; }
+</style>
+
+<div id='d1'>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+  some text<br>
+</div>
+
+<button id='b1'>body scrollbars</button>
+<button id='b2'>div scrollbars</button>
+
+<div id="d2">
+</div>
+
+<script>
+  b1.onclick = () => {
+    var style = document.createElement("style");
+    style.innerHTML = "body::-webkit-scrollbar{ display:none; }";
+    document.getElementsByTagName("head")[0].appendChild(style);
+  };
+  
+  b2.onclick = () => {
+    var style = document.createElement("style");
+    style.innerHTML = "div::-webkit-scrollbar{ display:none; }";
+    document.getElementsByTagName("head")[0].appendChild(style);
+  };
+</script>

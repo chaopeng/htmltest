@@ -1,193 +1,53 @@
 <!DOCTYPE html>
 
-<html dir="ltr">
+<style>
+  html {
+    height: 100%
+  }
 
-<link rel="stylesheet" type="text/css" href="./fileapp.css">
+  body {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+  }
 
+  #table {
+    display: flex;
+  }
 
-<div class="detail-table table" id="detail-table" autofocus="">
-  <div class="table-header" style="margin-left: 0px;">
-    <div class="table-header-inner" style="width: 759px;">
-      <div class="table-header-cell" style="width: 359px;">
-        <div class="table-header-label"><span class="table-header-sort-image-asc" style="padding: 0px;">Name</span></div>
-      </div>
-      <div class="table-header-cell" style="width: 102px;">
-        <div class="table-header-label" style="text-align: end;"><span style="padding: 0px;">Size</span></div>
-      </div>
-      <div hidden="" class="table-header-cell" style="width: 0px;">
-        <div class="table-header-label" style="text-align: end;"><span style="padding: 0px;">Status</span></div>
-      </div>
-      <div class="table-header-cell" style="width: 126px;">
-        <div class="table-header-label"><span style="padding: 0px;">Type</span></div>
-      </div>
-      <div class="table-header-cell" style="width: 172px;">
-        <div class="table-header-label"><span style="padding: 0px;">Date modified</span></div>
-      </div>
-      <div class="table-header-splitter" style="-webkit-margin-start: 359px;"></div>
-      <div class="table-header-splitter" style="-webkit-margin-start: 461px;"></div>
-      <div class="table-header-splitter" hidden=""></div>
-      <div class="table-header-splitter" style="-webkit-margin-start: 587px;"></div>
-      <div class="table-header-splitter" style="-webkit-margin-start: 759px;"></div>
-    </div>
-  </div>
-  <list role="listbox" tabindex="1" class="list" id="file-list" contextmenu="#file-context-menu" style="overflow-x: hidden; overflow-y: scroll; -webkit-user-drag: element;"
-    aria-activedescendant="listitem-4">
-    <div class="spacer" style="height: 0px;"></div>
-    <li role="option" id="listitem-8" class="table-row file dim-offline" style="width: 759px;">
-      <div class="table-row-cell" style="width: 359px;">
-        <div class="detail-name">
-          <div class="detail-icon" file-type-icon="UNKNOWN">
-            <div class="detail-checkmark"></div>
-          </div>
-          <div class="filename-label"><span class="entry-name">Safe Browsing Bloom</span></div>
-        </div>
-      </div>
-      <div class="table-row-cell" style="width: 102px; text-align: end;">
-        <div class="size">20.3 MB</div>
-      </div>
-      <div class="table-row-cell" hidden="" style="width: 0px; text-align: end;">
-        <div class="status status-icon" file-status-icon="unknown"></div>
-      </div>
-      <div class="table-row-cell" style="width: 126px;">
-        <div class="type">File</div>
-      </div>
-      <div class="table-row-cell" style="width: 172px;">
-        <div class="date">Today 2:18 PM</div>
-      </div>
-    </li>
-    <li role="option" id="listitem-4" class="table-row file dim-offline" style="width: 759px;" lead="lead" selected="" aria-posinset="2"
-      aria-setsize="15">
-      <div class="table-row-cell" style="width: 359px;">
-        <div class="detail-name">
-          <div class="detail-icon" file-type-icon="UNKNOWN">
-            <div class="detail-checkmark"></div>
-          </div>
-          <div class="filename-label"><span class="entry-name">Safe Browsing Bloom Prefix Set</span></div>
-        </div>
-      </div>
-      <div class="table-row-cell" style="width: 102px; text-align: end;">
-        <div class="size">3.2 MB</div>
-      </div>
-      <div class="table-row-cell" hidden="" style="width: 0px; text-align: end;">
-        <div class="status status-icon" file-status-icon="unknown"></div>
-      </div>
-      <div class="table-row-cell" style="width: 126px;">
-        <div class="type">File</div>
-      </div>
-      <div class="table-row-cell" style="width: 172px;">
-        <div class="date">Today 2:18 PM</div>
-      </div>
-    </li>
-    <li role="option" id="listitem-14" class="table-row file dim-offline" style="width: 759px;">
-      <div class="table-row-cell" style="width: 359px;">
-        <div class="detail-name">
-          <div class="detail-icon" file-type-icon="UNKNOWN">
-            <div class="detail-checkmark"></div>
-          </div>
-          <div class="filename-label"><span class="entry-name">Safe Browsing Channel IDs</span></div>
-        </div>
-      </div>
-      <div class="table-row-cell" style="width: 102px; text-align: end;">
-        <div class="size">5 KB</div>
-      </div>
-      <div class="table-row-cell" hidden="" style="width: 0px; text-align: end;">
-        <div class="status status-icon" file-status-icon="unknown"></div>
-      </div>
-      <div class="table-row-cell" style="width: 126px;">
-        <div class="type">File</div>
-      </div>
-      <div class="table-row-cell" style="width: 172px;">
-        <div class="date">Today 2:18 PM</div>
-      </div>
-    </li>
-    <li role="option" id="listitem-3" class="table-row file dim-offline" style="width: 759px;">
-      <div class="table-row-cell" style="width: 359px;">
-        <div class="detail-name">
-          <div class="detail-icon" file-type-icon="UNKNOWN">
-            <div class="detail-checkmark"></div>
-          </div>
-          <div class="filename-label"><span class="entry-name">Safe Browsing Channel IDs-journal</span></div>
-        </div>
-      </div>
-      <div class="table-row-cell" style="width: 102px; text-align: end;">
-        <div class="size">0 bytes</div>
-      </div>
-      <div class="table-row-cell" hidden="" style="width: 0px; text-align: end;">
-        <div class="status status-icon" file-status-icon="unknown"></div>
-      </div>
-      <div class="table-row-cell" style="width: 126px;">
-        <div class="type">File</div>
-      </div>
-      <div class="table-row-cell" style="width: 172px;">
-        <div class="date">Today 2:18 PM</div>
-      </div>
-    </li>
-    <li role="option" id="listitem-15" class="table-row file dim-offline" style="width: 759px;">
-      <div class="table-row-cell" style="width: 359px;">
-        <div class="detail-name">
-          <div class="detail-icon" file-type-icon="UNKNOWN">
-            <div class="detail-checkmark"></div>
-          </div>
-          <div class="filename-label"><span class="entry-name">Safe Browsing Cookies</span></div>
-        </div>
-      </div>
-      <div class="table-row-cell" style="width: 102px; text-align: end;">
-        <div class="size">7 KB</div>
-      </div>
-      <div class="table-row-cell" hidden="" style="width: 0px; text-align: end;">
-        <div class="status status-icon" file-status-icon="unknown"></div>
-      </div>
-      <div class="table-row-cell" style="width: 126px;">
-        <div class="type">File</div>
-      </div>
-      <div class="table-row-cell" style="width: 172px;">
-        <div class="date">Today 2:18 PM</div>
-      </div>
-    </li>
-    <li role="option" id="listitem-2" class="table-row file dim-offline" style="width: 759px;">
-      <div class="table-row-cell" style="width: 359px;">
-        <div class="detail-name">
-          <div class="detail-icon" file-type-icon="UNKNOWN">
-            <div class="detail-checkmark"></div>
-          </div>
-          <div class="filename-label"><span class="entry-name">Safe Browsing Cookies-journal</span></div>
-        </div>
-      </div>
-      <div class="table-row-cell" style="width: 102px; text-align: end;">
-        <div class="size">0 bytes</div>
-      </div>
-      <div class="table-row-cell" hidden="" style="width: 0px; text-align: end;">
-        <div class="status status-icon" file-status-icon="unknown"></div>
-      </div>
-      <div class="table-row-cell" style="width: 126px;">
-        <div class="type">File</div>
-      </div>
-      <div class="table-row-cell" style="width: 172px;">
-        <div class="date">Today 2:18 PM</div>
-      </div>
-    </li>
-    <li role="option" id="listitem-13" class="table-row file dim-offline" style="width: 759px;">
-      <div class="table-row-cell" style="width: 359px;">
-        <div class="detail-name">
-          <div class="detail-icon" file-type-icon="UNKNOWN">
-            <div class="detail-checkmark"></div>
-          </div>
-          <div class="filename-label"><span class="entry-name">Safe Browsing Csd Whitelist</span></div>
-        </div>
-      </div>
-      <div class="table-row-cell" style="width: 102px; text-align: end;">
-        <div class="size">337 KB</div>
-      </div>
-      <div class="table-row-cell" hidden="" style="width: 0px; text-align: end;">
-        <div class="status status-icon" file-status-icon="unknown"></div>
-      </div>
-      <div class="table-row-cell" style="width: 126px;">
-        <div class="type">File</div>
-      </div>
-      <div class="table-row-cell" style="width: 172px;">
-        <div class="date">Today 2:18 PM</div>
-      </div>
-    </li>
-    <div class="spacer" style="width: 759px; height: 320px;"></div>
+  list {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  list>* {
+    position: relative;
+  }
+
+  li {
+    width: 800px;
+  }
+</style>
+
+<div id="table">
+  <list>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 11</li>
+    <li>Item 12</li>
+    <li>Item 13</li>
+    <li>Item 14</li>
+    <li>Item 15</li>
+    <li>Item 16</li>
   </list>
 </div>

@@ -31,18 +31,10 @@
 <img src="./Scrollbar test on hn _ Hacker News_files/s.gif" height="1" width="14"></center></td><td class="default"><div style="margin-top:2px; margin-bottom:-10px;"><span class="comhead">
           <span class="score" id="score_15203401">1 point</span> by <a href="https://news.ycombinator.com/user?id=chaopeng" class="hnuser"><font color="#3c963c">chaopeng</font></a> <span class="age"><a href="https://news.ycombinator.com/item?id=15203401">0 minutes ago</a></span> <span id="unv_15203401"></span><span class="par"></span> | <a href="https://news.ycombinator.com/edit?id=15203401">edit</a> | <a href="https://news.ycombinator.com/delete-confirm?id=15203401&amp;goto=item%3Fid%3D15203386">delete</a> <a class="togg" n="1" href="javascript:void(0)" onclick="return toggle(event, 15203401)">[-]</a>          <span class="storyon"></span>
                   </span></div><br><div class="comment">
-                  <span class="c00">avaer 18 days ago [-]<p>I have some experience with this stuff, and my go-to advice is:</p><p></p><pre><code>  - Never construct or mutate objects in a loop or recursive call.
-  - Preallocate the max of what you'll need at load time, then index into it.
-  - Prefer typed arrays over objects.
-  - Don't use strings. Work with numbers.
-  - Remove function calls.
-  - Do not call a function with differently shaped arguments.
-  - If the JS engine can't prove a number is a 32 bit int, you'll take a large perf hit.
+                  <span class="c00">avaer 18 days ago [-]<p>I</p><p></p><pre><code>
   - Break out your algo into a worker. Not only does it keep things responsive, but it might actually be faster due to less GC pressure.
-  - The web stack is full of frightening gotchas that you'll discover. Recieving large data on a WebSocket can halt your DOM rendering. Leaking a Promise callback can completely blow a function into interpreter mode. And other fun times.
 </code></pre>
-Finally: If you're hand optimizing and not getting sufficient results on your preferred browser, accept that you're screwed. The next browser will break your assumptions. Rethink your algorithm and data flow, or move it elsewhere, like a worker or server.
-I do agree the tooling for this stuff isn't great, but I found Chrome's line-by-line perf counts to be excellent hints about where you could do better. It's often surprising but obvious in retrospect.<span>
+Finally<span>
               </span><div class="reply">        <p><font size="1">
                       <u><a href="https://news.ycombinator.com/reply?id=15203401&amp;goto=item%3Fid%3D15203386%2315203401">reply</a></u>
                   </font>

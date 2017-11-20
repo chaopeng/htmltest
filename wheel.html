@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<style>
+  #d {
+    height: 10000px;
+    width: 10000px;
+  }
+</style>
+
+<body>
+<div id='d'></div>
+</body>
+
+<script>
+d.onwheel = (e) => {
+  console.log('onwheel ' + e.ctrlKey + ',' + e.deltaX + ',' + e.deltaY);
+};
+</script>

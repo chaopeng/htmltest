@@ -1,2 +1,17 @@
 <p style="position: absolute; top: 2000px">123123123123</p>
-<iframe src="./iframe.html" width="100" height="100"></iframe>
+<iframe id="i" src="./iframe.html" width="100" height="100"></iframe>
+
+<button id="s">Show</button>
+<button id="h">Hide</button>
+
+<script>
+	let s = document.getElementById('s');
+	s.addEventListener('click', (e) => {
+		document.getElementById("i").style.display = "inline";
+	});
+	
+	let h = document.getElementById('h');
+	h.addEventListener('click', (e) => {
+		document.getElementById("i").style.display = "none";
+	});
+</script>

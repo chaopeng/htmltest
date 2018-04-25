@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<style>
+html {
+  background-color: coral;
+  height: 200%;
+  width: 200%;
+}
+
+#d {
+  background-color: azure;
+  height: 200px;
+  width: 200px;
+	overflow: hidden;
+}
+
+#big {
+  height: 400px;
+  width: 400px;
+}
+</style>
+
+<p>Prevent default wheel on:</p>
+<input type='checkbox' id='c1'>document</input>
+<input type='checkbox' id='c2'>div</input>
+<button id='btn'>Update</button>
+
+<p>
+
+<div id='d'>
+	<div id='big'>
+	</div>
+</div>
+
+<script>
+	function pd(e) {
+		console.log('prevent wheel ' + e.currentTarget);
+		e.preventDefault();
+	}
+	btn.onclick = () => {
+		document.removeEventListener('wheel', pd);
+		d.removeEventListener('wheel', pd);
+
+    if (c1.checked)
+			document.addEventListener('wheel', pd);
+		if (c2.checked)
+			d.addEventListener('wheel', pd);
+	};
+</script>

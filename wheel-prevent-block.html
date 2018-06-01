@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<style>
+div {
+  height: 100px;
+  width: 200px;
+  border: 1px solid red;
+  overflow: scroll;
+  margin: 10px;
+}
+
+.big {
+  height: 1000px;
+  width: 1000px;
+}
+</style>
+
+No handler.<br>
+<div id='d1'>
+<p class='big'></p>
+</div>
+
+No prevent default handler.<br>
+<div id='d2'>
+<p class='big'></p>
+</div>
+
+Not real prevent default handler.<br>
+<div id='d3'>
+<p class='big'></p>
+</div>
+
+Real prevent default handler.<br>
+<div id='d4'>
+<p class='big'></p>
+</div>
+
+<script>
+
+d2.onwheel = () => {
+  console.log('onwheel');
+}
+
+d3.onwheel = (e) => {
+  // False
+  if (window.location == '123')
+    e.preventDefault();
+}
+
+d4.onwheel = (e) => {
+  e.preventDefault();
+}
+
+</script>

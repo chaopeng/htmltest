@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
 <style>
+body {
+  overscroll-behavior: auto;
+}
+
 div {
   height: 100px;
   width: 200px;
@@ -12,6 +16,14 @@ div {
 .big {
   height: 1000px;
   width: 1000px;
+}
+
+#d5 {
+  overscroll-behavior: contain;
+}
+
+#d6 {
+  overscroll-behavior: none;
 }
 </style>
 
@@ -35,6 +47,19 @@ Real prevent default handler.<br>
 <p class='big'></p>
 </div>
 
+overscroll-behavior: contain<br>
+<div id='d5'>
+<p class='big'></p>
+</div>
+
+overscroll-behavior: none<br>
+<div id='d6'>
+<p class='big'></p>
+</div>
+
+<button id='btn'>toggle body overscroll-behavior</button>
+<p id='state'>body overscroll-behavior is auto</p>
+
 <script>
 
 d2.onwheel = () => {
@@ -51,4 +76,10 @@ d4.onwheel = (e) => {
   e.preventDefault();
 }
 
+let overscroll = 'auto';
+btn.onclick = (e) => {
+	overscroll = overscroll == 'auto' ? 'none' : 'auto';
+	document.body.style.overscrollBehavior = overscroll;
+	state.innerHTML = 'body overscroll-behavior is ' + overscroll;
+}
 </script>

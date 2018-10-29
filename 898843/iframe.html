@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>frame</title>
+
+  <style>
+  div{
+    margin-top: 1200px;
+  }
+  </style>
+</head>
+<body>
+This is the frame with window.top.document.body.getBoundingClientRect().top => <span id="rect"></span>
+
+<div id='test'>
+  the test div
+</div>
+<button type="button" onclick="bug()">Click Me</button>
+
+<script>
+function bug() {
+  window.location.hash='';
+  setTimeout(function() {
+    document.querySelector('#rect').innerHTML = window.top.document.body.getBoundingClientRect().top;
+  }, 0)
+}
+document.querySelector('#rect').innerHTML = window.top.document.body.getBoundingClientRect().top;
+</script>
+</body>
+</html>

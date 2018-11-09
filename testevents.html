@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<style>
+#scroller {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  overflow: auto;
+}
+
+#big {
+  height: 1000px;
+}
+</style>
+
+<div id='scroller'>
+  <div id='big'></div>
+</div>
+
+<div id='log'></div>
+
+<script>
+let message = '';
+
+window.onkeydown = (e) => {
+  let key = e.keyCode;  
+  if (key == 38) {
+    message += "receive key up <br>";
+  } else if (key == 40) {
+    message += "receive key down <br>";
+  } else {
+    message += "receive key " + key + "<br>";
+  }
+  document.getElementById('log').innerHTML = message;
+}
+
+let scroller = document.getElementById('scroller');
+
+scroller.onwheel = (e) => {
+  message += "receive mouse wheel <br>";
+  document.getElementById('log').innerHTML = message;
+}
+
+scroller.onscroll = (e) => {
+  message += "receive scroll <br>";
+  document.getElementById('log').innerHTML = message;
+}
+
+scroller.onmousemove = (e) => {
+  message += "receive mouse move <br>";
+  document.getElementById('log').innerHTML = message;
+}
+
+</script>

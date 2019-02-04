@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 
 <style>
+#d1 {
+  height: 200px;
+  width: 90%;
+  overflow: scroll;
+}
+
+#d2 {
+  height: 10000px;
+}
+
 #ifr {
-  position: absolute;
-  top: 100px;
   height: 10000px;
   width: 90%;
 }
 </style>
 
+<div id='d1'>
+  <div id='d2'></div>
+</div>
 <iframe id='ifr' src='http://example.com/'></iframe>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+Last event: <br>
+<p id='log'></p>
+
+<script>
+  document.addEventListener('keydown', (e) => {
+    let log = document.getElementById('log');
+    log.innerText = 'key:' + e.key + ', code:' + e.code;
+  });
+</script>

@@ -8,5 +8,6 @@ Last event: <br>
   document.addEventListener('keydown', (e) => {
     let log = document.getElementById('log');
     log.innerText = 'key:' + e.key + ', code:' + e.code;
+    e.preventDefault();
   });
 </script>
